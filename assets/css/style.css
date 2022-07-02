@@ -521,7 +521,7 @@ p {
         top: 116%;
         left: 0;
         width: 100%;
-        background-color: #1863ff;
+        background-color: #0dc6a8;
         z-index: 8; } }
     @media (max-width: 767px) {
       .navbar-area .navbar .navbar-collapse {
@@ -529,7 +529,7 @@ p {
         top: 116%;
         left: 0;
         width: 100%;
-        background-color: #1863ff;
+        background-color: #18fffb;
         z-index: 8; } }
     .navbar-area .navbar .navbar-nav .nav-item {
       margin: 0 16px;
