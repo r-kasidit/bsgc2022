@@ -39,6 +39,23 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="assets/css/style.css">
 
+`
+`
+    <script>
+        $(document).ready(function () {
+            // Add minus icon for collapse element which is open by default
+            $(".collapse.show").each(function () {
+                $(this).siblings(".card-header").find(".btn i").addClass("fa-minus-circle").removeClass("fa-plus-circle");
+            });
+
+            // Toggle plus minus icon on show hide of collapse element
+            $(".collapse").on('show.bs.collapse', function () {
+                $(this).parent().find(".card-header .btn i").removeClass("fa-plus-circle").addClass("fa-minus-circle");
+            }).on('hide.bs.collapse', function () {
+                $(this).parent().find(".card-header .btn i").removeClass("fa-minus-circle").addClass("fa-plus-circle");
+            });
+        });
+    </script>
 
 </head>
 
@@ -140,27 +157,75 @@
 
     <section id="about" class="about-area pb-130 pt-80">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-lg-start">
                 <div class="col-lg-6">
                     <div class="about-image mt-50 wow fadeInLeft" data-wow-duration="1s">
                         <img src="assets/images/about.png" alt="About">
                     </div> <!-- about image -->
                 </div>
                 <div class="col-lg-6">
-                    <div class="about-content mt-45 wow fadeInRight" data-wow-duration="1s">
-                        <div class="section-title">
-                            <h2 class="title">About Our Conference</h2>
-                        </div> <!-- section title -->
+                        <div class="container mt-45 wow fadeInRight" data-wow-duration="1s">
+                            <ul id="myTab2" role="tablist" class="nav nav-tabs nav-pills with-arrow lined flex-column flex-sm-row text-center">
+                                <li class="nav-item flex-sm-fill">
+                                    <a id="home2-tab" data-toggle="tab" href="#home2" role="tab" aria-controls="home2" aria-selected="true"
+                                        class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0 active">about BSGC</a>
+                                </li>
+                                <li class="nav-item flex-sm-fill">
+                                    <a id="profile2-tab" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2"
+                                        aria-selected="false" class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0">about theme</a>
+                                </li>
+                                
+                            </ul>
+                            <div id="myTab2Content" class="tab-content">
+                                <div id="home2" role="tabpanel" aria-labelledby="home-tab" class="tab-pane fade px-4 py-5 show active">
+                                    <p class="text mt-30">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Biological Sciences Graduate Congress (BSGC) is an annual congress organized by and dedicated to
+                                        graduate students from three collaborating universities: National University of Singapore (NUS), Singapore;
+                                        University of Malaya (UM), Malaysia; and Chulalongkorn University (CU), Thailand. The BSGC provides platforms for
+                                        graduate students and delegates from other universities to exchange ideas and present the most recent findings from
+                                        their research. The congress also builds bridges to establish future collaborations among regional young scientists.
+                                        Throughout the decades, the BSGC has been attracting and welcoming participants from several academic and research
+                                        institutions in Thailand, Singapore, Malaysia, India, the Philippines, Indonesia, Myanmar, Taiwan etc. <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In 2022, the 27th BSGC will be organized by Chulalongkorn University. We are honored to invite you to participate in
+                                        this congress. The congress themes are very broad covering several approaches of biological sciences. There are four
+                                        themes running in parallel sessions including: </p>
+                                </div>
+                                <div id="profile2" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade px-4 py-5">
+                                    
+                                    <h3 class="sub-title text-center" style="padding-bottom:4%;">“New Normal”</h3>
 
-                        <p class="text mt-30">Biological Sciences Graduate Congress (BSGC) is an annual congress organized by and dedicated to graduate students from three collaborating universities: National University of Singapore (NUS), Singapore; University of Malaya (UM), Malaysia; and Chulalongkorn University (CU), Thailand. The BSGC provides platforms for graduate students and delegates from other universities to exchange ideas and present the most recent findings from their research. The congress also builds bridges to establish future collaborations among regional young scientists. Throughout the decades, the BSGC has been attracting and welcoming participants from several academic and research institutions in Thailand, Singapore, Malaysia, India, the Philippines, Indonesia, Myanmar, Taiwan etc. <br> <br> In 2022, the 27th BSGC will be organized by Chulalongkorn University. We are honored to invite you to participate in this congress. The congress themes are very broad covering several approaches of biological sciences. There are four themes running in parallel sessions including: </p>
-                        <p class="date"><span>19<sup>th</sup></span> December’ 22</p>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The COVID-19 pandemic has been spreading since 2019 and indeed it unavoidably had an impact on many aspects of our
+                                    lives, including social cohesiveness, economic structure, healthcare systems, education systems, and scientific
+                                    community. To prevent the spread of this pandemic and allow us to continue living normally, several precautions were put
+                                    in place, such as screening for COVID-19 infection before engaging in any activities, wearing a mask, keeping our hands
+                                    sanitized with alcohol, and practicing social distancing. Moreover, the significant transformation of social activities
+                                    that were moved to the online platform. Thus, the COVID-19 pandemic altered our lifestyle and this <b>“New Normal”</b> is
+                                    something that we will never get used to. <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We cannot deny that the biological sciences have contributed significantly to the fight against the COVID-19 pandemic,
+                                    for example, the development of COVID-19 vaccines and the ATK for rapid COVID-19 virus detection. As a result of the
+                                    COVID-19 pandemic knowledge being shared among biological scientists, there are currently many ways to prevent getting
+                                    infected with COVID-19. The international congress/conference offers a forum for scientists worldwide to discuss and
+                                    share new ideas that will lead to new scientific discoveries and encourage future collaboration. <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;According to above-mentioned reason, on behalf of the Faculty of Science, Chulalongkorn University, it is our honor to
+                                    serve as the host for <b>“The 27th Biological Sciences Graduate Congress (BSGC 2022)”</b> , which will be held on-site at
+                                    Chulalongkorn University, Bangkok, Thailand during December 15th to 17th, 2022. We hope to see you soon at the congress
+                                    in the <b>“New Normal”</b> style.
+
+                                </div>
+                                
+                            </div>
+                            <!-- End lined tabs -->
+                            
+                        </div>
                     </div> <!-- about content -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-
+    
     <!--====== ABOUT PART ENDS ======-->
+    
+   
 
     <!--====== COUNTER PART START ======-->
 

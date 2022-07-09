@@ -101,7 +101,8 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+background-color: rgba(243, 234, 234, 0.85); }
 
 /*===== All Button Style =====*/
 .main-btn {
@@ -224,7 +225,7 @@ p {
       height: 100%;
       border-style: solid;
       /* Spinner Color */
-      border-color: #1863ff #1863ff #e6e6e6;
+      border-color: #03b1a3 #01948f #e6e6e6;
       border-radius: 50%;
       border-width: 6px; }
     .preloader .loader .ytp-spinner-left .ytp-spinner-circle {
@@ -697,7 +698,9 @@ p {
        3.ABOUT css 
 ===========================*/
 .about-image img {
-  width: 100%; }
+  width: 100%; 
+  position:relative
+}
 
 .about-content .date {
   font-size: 18px;
@@ -718,6 +721,40 @@ p {
       top: -18px;
       left: 0; }
 
+.with-arrow .nav-link.active {
+  position: relative;
+}
+
+.with-arrow .nav-link.active::after {
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #02604a;
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+
+/* lined tabs */
+
+.lined .nav-link {
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: rgba(123, 155, 144, 0.9);
+}
+
+.lined .nav-link:hover {
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link.active {
+  background: none;
+  color: rgb(7, 139, 100);
+  border-color: #058479;
+}
 /*===========================
        4.COUNTER css 
 ===========================*/
@@ -733,18 +770,18 @@ p {
   .single-counter .counter-icon {
     position: relative;
     margin-top: -50px; }
-    .single-counter .counter-icon i {
+    .single-counter .counter-icon img {
       font-size: 65px;
-      color: #ffffff;
+      color: #3b966a;
       background-color: #3b966a;
-      border: 2px solid #e6e6e6;
-      width: 100px;
-      height: 100px;
+      border: 2px solid #3b966a;
+      width: 150px;
+      height: 150px;
       line-height: 100px;
       border-radius: 50%; }
   .single-counter .counter-content .count {
     font-size: 45px;
-    color: #1863ff;
+    color: #007e7e;
     font-weight: 600;
     margin-top: 5px; }
   .single-counter .counter-content .text-1 {
